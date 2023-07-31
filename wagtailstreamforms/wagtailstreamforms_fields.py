@@ -214,7 +214,7 @@ class SingleFileField(BaseField):
 
 class MultiFileField(BaseField):
     field_class = forms.FileField
-    widget = forms.widgets.FileInput(attrs={"multiple": True})
+    widget = forms.widgets.FileInput(attrs={"allow_multiple_selected": True})
     icon = "doc-full-inverse"
     label = _("Files field")
 
