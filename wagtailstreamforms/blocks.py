@@ -20,15 +20,6 @@ class FormChooserBlock(blocks.ChooserBlock):
 
         return Form
 
-    @cached_property
-    def widget(self):
-        from .wagtail_hooks import WagtailStreamFormsChooser
-
-        return WagtailStreamFormsChooser()
-
-    def get_form_state(self, value):
-        return self.widget.get_value_data(value)
-
 
 class WagtailFormBlock(blocks.StructBlock):
     form = FormChooserBlock()
